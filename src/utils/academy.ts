@@ -102,7 +102,7 @@ export const PROGRAMS: ProgramItem[] = [
       'Available Mon–Fri 3:30–8:00 PM + Exclusive Saturday sessions'
     ],
     scheduleNote: 'Mon–Fri 3:30–8:00 PM & Saturday sessions available',
-    imageUrl: '/src/assets/images/programs_guitar_craft_1793912523569.jpg',
+    imageUrl: './assets/images/programs_guitar_craft_1793912523569.jpg',
     instructorFocus: 'Contemporary & Classical Performance'
   },
   {
@@ -120,7 +120,7 @@ export const PROGRAMS: ProgramItem[] = [
       'Performance interpretation & stage poise'
     ],
     scheduleNote: 'Monday – Friday, 3:30 PM to 8:00 PM',
-    imageUrl: '/src/assets/images/programs_piano_keys_1793912524283.jpg',
+    imageUrl: './assets/images/programs_piano_keys_1793912524283.jpg',
     instructorFocus: 'Classical, Contemporary & Liturgical'
   },
   {
@@ -138,7 +138,7 @@ export const PROGRAMS: ProgramItem[] = [
       'Microphone technique & stage confidence'
     ],
     scheduleNote: 'Monday – Friday, 3:30 PM to 8:00 PM',
-    imageUrl: '/src/assets/images/academy_studio_aesthetic_1793912522983.jpg',
+    imageUrl: './assets/images/academy_studio_aesthetic_1793912522983.jpg',
     instructorFocus: 'Vocal Health, Range & Dynamic Expression'
   },
   {
@@ -156,7 +156,7 @@ export const PROGRAMS: ProgramItem[] = [
       'Available Mon–Fri 3:30–8:00 PM + Exclusive Saturday sessions'
     ],
     scheduleNote: 'Mon–Fri 3:30–8:00 PM & Exclusive Saturday sessions',
-    imageUrl: '/src/assets/images/hero_instruments_cinematic_1793912521668.jpg',
+    imageUrl: './assets/images/hero_instruments_cinematic_1793912521668.jpg',
     instructorFocus: 'Rock, Jazz, Latin & Orchestral Percussion'
   },
   {
@@ -174,7 +174,7 @@ export const PROGRAMS: ProgramItem[] = [
       'Limited studio roster for high-caliber instruction'
     ],
     scheduleNote: 'Monday – Friday, 3:30 PM to 8:00 PM (Limited Spots)',
-    imageUrl: '/src/assets/images/programs_violin_studio_1793912524224.jpg',
+    imageUrl: './assets/images/programs_violin_studio_1793912524224.jpg',
     instructorFocus: 'Classical Mastery & Fine Intonation'
   }
 ];

@@ -2,5 +2,7 @@
   "name": "Wichita Falls Music Academy",
   "description": "Premier music instruction in Wichita Falls, TX. Personalized training in guitar, piano, voice, percussion, and violin for all ages and skill levels.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

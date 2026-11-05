@@ -98,7 +98,7 @@ export const AboutAcademy: React.FC<AboutAcademyProps> = ({ onExplorePrograms })
           <div className="lg:col-span-5 relative">
             <div className="relative group overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-zinc-900">
               <img
-                src="/src/assets/images/academy_studio_aesthetic_1793912522983.jpg"
+                src="./assets/images/academy_studio_aesthetic_1793912522983.jpg"
                 alt="Wichita Falls Music Academy interior studio"
                 className="w-full h-[450px] lg:h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"

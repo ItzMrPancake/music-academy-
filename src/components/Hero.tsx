@@ -15,7 +15,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onExplorePrograms })
       {/* Background Image with Cinematic Scrim */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/hero_instruments_cinematic_1793912521668.jpg"
+          src="./assets/images/hero_instruments_cinematic_1793912521668.jpg"
           alt="Master musical instruments at Wichita Falls Music Academy"
           className="w-full h-full object-cover object-center scale-105 transform motion-safe:transition-transform motion-safe:duration-1000 motion-safe:ease-out"
           referrerPolicy="no-referrer"
