@@ -26,18 +26,18 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onExplorePrograms })
       </div>
 
       {/* Main Hero Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 md:px-12 text-center flex flex-col items-center">
         {/* Editorial Sub-kicker */}
-        <div className="mb-6 flex items-center justify-center gap-3">
-          <span className="h-[1px] w-8 sm:w-12 bg-amber-400/40" />
-          <span className="text-xs uppercase tracking-[0.3em] font-medium text-amber-300/90">
+        <div className="mb-4 sm:mb-6 flex items-center justify-center gap-2.5 sm:gap-3">
+          <span className="h-[1px] w-6 sm:w-12 bg-amber-400/40" />
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] font-medium text-amber-300/90">
             Wichita Falls, Texas · Est. Texoma
           </span>
-          <span className="h-[1px] w-8 sm:w-12 bg-amber-400/40" />
+          <span className="h-[1px] w-6 sm:w-12 bg-amber-400/40" />
         </div>
 
         {/* Large, Elegant Typography Headline */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white leading-[1.05] text-balance max-w-4xl">
+        <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white leading-[1.1] sm:leading-[1.05] text-balance max-w-4xl">
           Master Your Craft.{' '}
           <span className="italic block mt-1 sm:mt-2 text-[#e5b869]">
             Elevate Your Sound.
@@ -45,17 +45,17 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onExplorePrograms })
         </h1>
 
         {/* Subheadline with ample breathing space */}
-        <p className="mt-8 text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl font-light leading-relaxed text-balance">
+        <p className="mt-5 sm:mt-8 text-sm sm:text-base md:text-lg lg:text-xl text-zinc-300 max-w-xl font-light leading-relaxed text-balance">
           Bringing premier music instruction to the Texoma area. For all ages,
           all abilities, and all passions.
         </p>
 
         {/* Action CTAs */}
-        <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-md">
+        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-6 w-full max-w-md">
           {/* Primary CTA (Sleek pill-shaped button) */}
           <button
             onClick={onStartJourney}
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7e7a8] to-[#d4af37] text-zinc-950 font-semibold text-sm tracking-wider uppercase transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 hover:scale-[1.02] active:scale-98 cursor-pointer text-center whitespace-nowrap"
+            className="w-full sm:w-auto min-h-[48px] px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7e7a8] to-[#d4af37] text-zinc-950 font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 active:scale-98 cursor-pointer text-center whitespace-nowrap"
           >
             Start Your Journey
           </button>
@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartJourney, onExplorePrograms })
           {/* Secondary CTA (Outline button) */}
           <a
             href="tel:9402356190"
-            className="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 hover:border-amber-400/60 text-zinc-200 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] backdrop-blur-sm text-sm tracking-wider uppercase font-medium transition-all duration-300 flex items-center justify-center gap-2.5 text-center whitespace-nowrap"
+            className="w-full sm:w-auto min-h-[48px] px-7 py-3.5 sm:px-8 sm:py-4 rounded-full border border-white/20 hover:border-amber-400/60 text-zinc-200 hover:text-white bg-white/[0.03] hover:bg-white/[0.08] backdrop-blur-sm text-xs sm:text-sm tracking-wider uppercase font-medium transition-all duration-300 flex items-center justify-center gap-2.5 text-center whitespace-nowrap"
           >
             <Phone className="w-4 h-4 text-amber-400" />
             <span>Call (940) 235-6190</span>

@@ -78,46 +78,46 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <section id="contact" className="relative w-full py-24 sm:py-32 bg-[#0c0c10] border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="contact" className="relative w-full py-16 sm:py-24 lg:py-32 bg-[#0c0c10] border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
         {/* Section Header */}
-        <div className="text-left max-w-3xl mb-16">
-          <div className="text-xs uppercase tracking-[0.25em] font-medium text-amber-400/90 mb-3">
+        <div className="text-left max-w-3xl mb-10 sm:mb-16">
+          <div className="text-[11px] sm:text-xs uppercase tracking-[0.25em] font-medium text-amber-400/90 mb-2 sm:mb-3">
             04. Begin Your Music Instruction
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-medium tracking-tight text-white leading-tight">
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-tight">
             Connect & Visit
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-zinc-300 font-light leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-xs sm:text-base lg:text-lg text-zinc-300 font-light leading-relaxed">
             Reach out to schedule your preliminary evaluation or inquire about studio availability. We look forward to welcoming you to the Academy.
           </p>
         </div>
 
         {/* Layout: Split-Screen Contact */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Left: Minimalist Underline-Only Form */}
-          <div className="lg:col-span-6 bg-zinc-950/40 p-8 sm:p-10 rounded-2xl border border-white/5">
-            <h3 className="font-serif text-2xl font-medium text-white mb-2">
+          <div className="lg:col-span-6 bg-zinc-950/40 p-5 sm:p-8 lg:p-10 rounded-2xl border border-white/5">
+            <h3 className="font-serif text-xl sm:text-2xl font-medium text-white mb-2">
               Send an Inquiry
             </h3>
-            <p className="text-xs sm:text-sm text-zinc-400 mb-8 font-light">
+            <p className="text-xs sm:text-sm text-zinc-400 mb-6 sm:mb-8 font-light">
               Fill in your details below and our faculty will respond within one business day.
             </p>
 
             {submitted ? (
-              <div className="py-10 px-4 text-center space-y-5 bg-amber-500/5 rounded-2xl border border-amber-400/20">
-                <div className="w-16 h-16 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-300 flex items-center justify-center mx-auto shadow-lg shadow-amber-950/30">
-                  <CheckCircle2 className="w-8 h-8" />
+              <div className="py-8 sm:py-10 px-3 sm:px-4 text-center space-y-4 sm:space-y-5 bg-amber-500/5 rounded-2xl border border-amber-400/20">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-300 flex items-center justify-center mx-auto shadow-lg shadow-amber-950/30">
+                  <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl sm:text-3xl text-white font-medium">
+                  <h4 className="font-serif text-xl sm:text-3xl text-white font-medium">
                     Inquiry Received
                   </h4>
-                  <p className="text-xs uppercase tracking-widest text-amber-400/90 font-medium mt-1">
+                  <p className="text-[11px] sm:text-xs uppercase tracking-widest text-amber-400/90 font-medium mt-1">
                     Wichita Falls Music Academy Faculty
                   </p>
                 </div>
-                <p className="text-sm text-zinc-300 max-w-md mx-auto font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-300 max-w-md mx-auto font-light leading-relaxed">
                   Thank you, <span className="text-white font-semibold">{formData.name}</span>. We have logged your enrollment inquiry for{' '}
                   <span className="text-amber-300 font-medium">
                     {PROGRAMS.find((p) => p.id === formData.program)?.name || 'Music'} Lessons
@@ -126,14 +126,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <div className="pt-2">
                   <button
                     onClick={resetForm}
-                    className="px-6 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-xs uppercase tracking-wider font-semibold text-zinc-200 hover:text-white transition-colors cursor-pointer"
+                    className="w-full sm:w-auto px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-xs uppercase tracking-wider font-semibold text-zinc-200 hover:text-white transition-colors cursor-pointer min-h-[44px]"
                   >
                     Send Another Inquiry
                   </button>
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                 {/* Program & Tier Quick Selectors */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-2">
                   <div>
@@ -145,7 +145,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       name="program"
                       value={formData.program}
                       onChange={handleChange}
-                      className="w-full bg-zinc-900 border-b border-white/20 text-white text-sm py-2 px-1 focus:border-amber-400 focus:outline-none transition-colors rounded-none"
+                      className="w-full min-h-[44px] bg-zinc-900 border-b border-white/20 text-white text-sm py-2.5 px-2 focus:border-amber-400 focus:outline-none transition-colors rounded-none"
                     >
                       {PROGRAMS.map((prog) => (
                         <option key={prog.id} value={prog.id} className="bg-zinc-900 text-white">
@@ -163,7 +163,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       name="tier"
                       value={formData.tier}
                       onChange={handleChange}
-                      className="w-full bg-zinc-900 border-b border-white/20 text-white text-sm py-2 px-1 focus:border-amber-400 focus:outline-none transition-colors rounded-none"
+                      className="w-full min-h-[44px] bg-zinc-900 border-b border-white/20 text-white text-sm py-2.5 px-2 focus:border-amber-400 focus:outline-none transition-colors rounded-none"
                     >
                       {TUITION_TIERS.map((tier) => (
                         <option key={tier.id} value={tier.id} className="bg-zinc-900 text-white">
@@ -183,10 +183,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     id="name"
                     type="text"
                     name="name"
+                    autoComplete="name"
                     placeholder="Enter your name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-base transition-colors"
+                    className="w-full min-h-[44px] bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-sm sm:text-base transition-colors"
                   />
                   {errors.name && <p className="text-xs text-rose-400 mt-1">{errors.name}</p>}
                 </div>
@@ -199,11 +200,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <input
                     id="phone"
                     type="tel"
-                    name="phone"
+                    inputMode="tel"
+                    autoComplete="tel"
                     placeholder="(940) 555-0199"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-base transition-colors"
+                    className="w-full min-h-[44px] bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-sm sm:text-base transition-colors"
                   />
                   {errors.phone && <p className="text-xs text-rose-400 mt-1">{errors.phone}</p>}
                 </div>
@@ -216,11 +218,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <input
                     id="email"
                     type="email"
-                    name="email"
+                    inputMode="email"
+                    autoComplete="email"
                     placeholder="you@domain.com"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-base transition-colors"
+                    className="w-full min-h-[44px] bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-sm sm:text-base transition-colors"
                   />
                   {errors.email && <p className="text-xs text-rose-400 mt-1">{errors.email}</p>}
                 </div>
@@ -237,7 +240,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     placeholder="Type the subject..."
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-base transition-colors"
+                    className="w-full min-h-[44px] bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-sm sm:text-base transition-colors"
                   />
                   {errors.subject && <p className="text-xs text-rose-400 mt-1">{errors.subject}</p>}
                 </div>
@@ -254,17 +257,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     placeholder="Type your message here..."
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-base resize-none transition-colors"
+                    className="w-full bg-transparent border-0 border-b border-white/20 py-2.5 px-0 text-white placeholder-zinc-600 focus:ring-0 focus:border-amber-400 focus:outline-none text-sm sm:text-base resize-none transition-colors"
                   />
                   {errors.message && <p className="text-xs text-rose-400 mt-1">{errors.message}</p>}
                 </div>
 
                 {/* Submit button with hover arrow animation */}
-                <div className="pt-4">
+                <div className="pt-2 sm:pt-4">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7e7a8] to-[#d4af37] text-zinc-950 font-semibold text-xs uppercase tracking-widest hover:brightness-110 active:scale-98 transition-all duration-300 shadow-lg shadow-amber-950/30 cursor-pointer disabled:opacity-70"
+                    className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7e7a8] to-[#d4af37] text-zinc-950 font-semibold text-xs uppercase tracking-widest hover:brightness-110 active:scale-98 transition-all duration-300 shadow-lg shadow-amber-950/30 cursor-pointer disabled:opacity-70 min-h-[48px]"
                   >
                     <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-200" />

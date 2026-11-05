@@ -14,22 +14,22 @@ export const TuitionSection: React.FC<TuitionSectionProps> = ({ onSelectTier }) 
   const selectedCalc = calculateTuition(activeTierId, isMilitary, studentCount);
 
   return (
-    <section id="tuition" className="relative w-full py-24 sm:py-32 bg-[#09090b] border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="tuition" className="relative w-full py-16 sm:py-24 lg:py-32 bg-[#09090b] border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="text-xs uppercase tracking-[0.25em] font-medium text-amber-400/90 mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <div className="text-[11px] sm:text-xs uppercase tracking-[0.25em] font-medium text-amber-400/90 mb-2 sm:mb-3">
             03. Transparent Investment
           </div>
-          <h2 className="font-serif text-3xl sm:text-5xl font-medium tracking-tight text-white leading-tight">
+          <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-tight">
             Investment in Your Talent
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-zinc-300 font-light leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-xs sm:text-base lg:text-lg text-zinc-300 font-light leading-relaxed">
             Predictable, transparent monthly tuition designed around your personal musical aspirations. All private instruction includes dedicated one-on-one mentorship.
           </p>
 
           {/* Interactive Calculator Controls: Military Family Fee Waiver & Family Size */}
-          <div className="mt-8 p-4 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-wrap items-center justify-center gap-6 text-sm">
+          <div className="mt-6 sm:mt-8 p-3.5 sm:p-4 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
             {/* Military toggle */}
             <label className="flex items-center gap-2.5 cursor-pointer select-none">
               <input
@@ -54,7 +54,7 @@ export const TuitionSection: React.FC<TuitionSectionProps> = ({ onSelectTier }) 
                   <button
                     key={num}
                     onClick={() => setStudentCount(num)}
-                    className={`px-3 py-1 rounded text-xs font-semibold transition-colors cursor-pointer ${
+                    className={`min-w-[32px] py-1 px-2.5 rounded text-xs font-semibold transition-colors cursor-pointer ${
                       studentCount === num
                         ? 'bg-amber-400 text-black shadow-sm'
                         : 'text-zinc-400 hover:text-white'
@@ -68,8 +68,14 @@ export const TuitionSection: React.FC<TuitionSectionProps> = ({ onSelectTier }) 
           </div>
         </div>
 
-        {/* Modern Minimalist Pricing Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        {/* Mobile Swipe Hint */}
+        <div className="md:hidden flex items-center justify-between text-[11px] text-zinc-500 mb-3 px-1">
+          <span>Swipe to compare plans</span>
+          <span>4 tiers available →</span>
+        </div>
+
+        {/* Modern Minimalist Pricing Grid (Mobile Snap Carousel, Desktop Grid) */}
+        <div className="flex overflow-x-auto pb-6 pt-3 -mx-5 px-5 snap-x snap-mandatory scrollbar-none md:grid md:grid-cols-2 lg:grid-cols-4 md:mx-0 md:px-0 gap-5 sm:gap-6 items-stretch">
           {TUITION_TIERS.map((tier) => {
             const isSelected = tier.id === activeTierId;
             const isSignature = tier.isPopular;
@@ -77,7 +83,7 @@ export const TuitionSection: React.FC<TuitionSectionProps> = ({ onSelectTier }) 
               <div
                 key={tier.id}
                 onClick={() => setActiveTierId(tier.id)}
-                className={`group relative rounded-2xl p-7 transition-all duration-300 flex flex-col justify-between cursor-pointer ${
+                className={`group relative rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between cursor-pointer w-[84vw] sm:w-[320px] md:w-auto shrink-0 snap-center ${
                   isSignature
                     ? 'bg-gradient-to-b from-amber-500/10 via-zinc-900/90 to-zinc-950 border-2 border-amber-400/60 shadow-xl shadow-amber-950/20'
                     : 'bg-zinc-900/60 hover:bg-zinc-900/90 border border-white/10 hover:border-white/20'
@@ -85,7 +91,7 @@ export const TuitionSection: React.FC<TuitionSectionProps> = ({ onSelectTier }) 
               >
                 {/* Popular label if signature */}
                 {isSignature && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-[#d4af37] to-[#e5b869] text-zinc-950 text-[11px] font-bold tracking-wider uppercase">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-[#d4af37] to-[#e5b869] text-zinc-950 text-[10px] sm:text-[11px] font-bold tracking-wider uppercase whitespace-nowrap">
                     Most Popular
                   </div>
                 )}
